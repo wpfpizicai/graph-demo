@@ -19,14 +19,45 @@ const graph = {
       name: "驻波",
       category: 0,
       value: 1,
-      symbolSize: 40,
+      symbolSize: 78,
       symbol: "circle",
+      label: {
+        backgroundColor: "transparent",
+        fontSize: 28,
+      }
     },
     {
       name: "未来发展",
       value: 1,
       category: 1,
-      symbolSize: 20,
+      symbolSize: [130,40],
+      symbol:'roundRect',
+      label: {
+        backgroundColor: "transparent",
+        fontSize: 28,
+      }
+    },
+    {
+      name: "章节联系",
+      value: 1,
+      category: 3,
+      symbolSize: [130,40],
+      symbol:'roundRect',
+      label: {
+        backgroundColor: "transparent",
+        fontSize: 28,
+      }
+    },
+    {
+      name: "技术应用",
+      value: 1,
+      category: 2,
+      symbolSize: [130,40],
+      symbol:'roundRect',
+      label: {
+        backgroundColor: "transparent",
+        fontSize: 28,
+      }
     },
     {
       name: "航空航天",
@@ -47,7 +78,7 @@ const graph = {
       symbolSize: 10,
     },
     {
-      name: "量子通信",
+      name: "量子信息",
       value: 1,
       category: 1,
       symbolSize: 10,
@@ -83,12 +114,6 @@ const graph = {
       symbolSize: 10,
     },
     {
-      name: "技术应用",
-      value: 1,
-      category: 2,
-      symbolSize: 20,
-    },
-    {
       name: "无线电",
       value: 1,
       category: 2,
@@ -119,19 +144,7 @@ const graph = {
       symbolSize: 10,
     },
     {
-      name: "章节联系",
-      value: 1,
-      category: 3,
-      symbolSize: 20,
-    },
-    {
       name: "量子力学",
-      value: 1,
-      category: 3,
-      symbolSize: 10,
-    },
-    {
-      name: "热学",
       value: 1,
       category: 3,
       symbolSize: 10,
@@ -143,13 +156,13 @@ const graph = {
       symbolSize: 10,
     },
     {
-      name: "电磁学",
+      name: "力学",
       value: 1,
       category: 3,
       symbolSize: 10,
     },
     {
-      name: "力学",
+      name: "电磁学",
       value: 1,
       category: 3,
       symbolSize: 10,
@@ -161,25 +174,7 @@ const graph = {
       symbolSize: 10,
     },
     {
-      name: "量子围栏",
-      value: 1,
-      category: 3,
-      symbolSize: 10,
-    },
-    {
-      name: "热声效应",
-      value: 1,
-      category: 3,
-      symbolSize: 10,
-    },
-    {
-      name: "能量传输",
-      value: 1,
-      category: 3,
-      symbolSize: 10,
-    },
-    {
-      name: "衍射",
+      name: "激光",
       value: 1,
       category: 3,
       symbolSize: 10,
@@ -191,13 +186,13 @@ const graph = {
       symbolSize: 10,
     },
     {
-      name: "传输线理论",
+      name: "共振",
       value: 1,
       category: 3,
       symbolSize: 10,
     },
     {
-      name: "天线设计",
+      name: "电磁波的传播",
       value: 1,
       category: 3,
       symbolSize: 10,
@@ -206,8 +201,14 @@ const graph = {
       name: "机械波",
       value: 1,
       category: 3,
-      symbolSize: 10,
+      symbolSize: 10
     },
+    {
+      name: "波函数的定态解",
+      value: 1,
+      category: 3,
+      symbolSize: 10
+    }
   ],
   links: [
     {
@@ -232,7 +233,7 @@ const graph = {
     },
     {
       source: "未来发展",
-      target: "量子通信",
+      target: "量子信息",
     },
     {
       source: "航空航天",
@@ -251,7 +252,7 @@ const graph = {
       target: "能量转换",
     },
     {
-      source: "量子通信",
+      source: "量子信息",
       target: "光学微腔",
     },
     {
@@ -284,10 +285,6 @@ const graph = {
     },
     {
       source: "章节联系",
-      target: "热学",
-    },
-    {
-      source: "章节联系",
       target: "光学",
     },
     {
@@ -304,35 +301,27 @@ const graph = {
     },
     {
       source: "量子力学",
-      target: "量子围栏",
-    },
-    {
-      source: "热学",
-      target: "热声效应",
-    },
-    {
-      source: "热学",
-      target: "能量传输",
+      target: "波函数的定态解",
     },
     {
       source: "光学",
-      target: "衍射",
+      target: "激光",
     },
     {
       source: "光学",
       target: "干涉",
     },
     {
-      source: "电磁学",
-      target: "传输线理论",
+      source: "力学",
+      target: "共振",
     },
     {
       source: "电磁学",
-      target: "天线设计",
+      target: "电磁波的传播",
     },
     {
       source: "力学",
-      target: "机械波",
-    },
-  ],
+      target: "机械波"
+    }
+  ]
 };
